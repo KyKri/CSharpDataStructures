@@ -5,10 +5,12 @@ namespace DataStructures
 
     class Queue<E>
     {
-        //Initializes new empty queue of desiredSize
-        public Queue(int desiredSize)
-        {
+        private const int defaultMaxSize = 1000;
 
+        //Initializes new empty queue of desiredSize if specified or defaultMaxSize
+        public Queue(int desiredSize = defaultMaxSize)
+        {
+            
         }
 
         //Attempts to add specified item, returns true if successful, false otherwise

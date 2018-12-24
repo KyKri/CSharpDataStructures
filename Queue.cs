@@ -6,11 +6,13 @@ namespace DataStructures
     class Queue<E>
     {
         private const int defaultMaxSize = 1000;
+        private int size, maxSize;
 
         //Initializes new empty queue of desiredSize if specified or defaultMaxSize
         public Queue(int desiredSize = defaultMaxSize)
         {
-            
+            size = 0;
+            maxSize = desiredSize;
         }
 
         //Attempts to add specified item, returns true if successful, false otherwise
@@ -40,19 +42,19 @@ namespace DataStructures
         //Returns current size of the Queue
         public int GetSize()
         {
-            return 0;
+            return this.size;
         }
 
         //Returns true if the Queue is full
         public bool IsFull()
         {
-            return false;
+            return size == maxSize;
         }
 
         //Returns true if the Queue is empty
         public bool IsEmpty()
         {
-            return false;
+            return size == 0;
         }
     }
 }

@@ -6,7 +6,8 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DataStructuresTester qt = new DataStructuresTester();
+            qt.TestQueue();
         }
     }
 }

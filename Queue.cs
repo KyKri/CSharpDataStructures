@@ -35,10 +35,11 @@ namespace DataStructures
             return false;
         }
 
-        //Returns the Queue to an empty state with size of desiredSize
+        //Returns the Queue to an empty state with original size
         public void Empty()
         {
-
+            this.size = 0;
+            this.storage = new E[this.maxSize];
         }
 
         //Returns current size of the Queue

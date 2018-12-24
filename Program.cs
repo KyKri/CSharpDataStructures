@@ -6,8 +6,8 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            DataStructuresTester qt = new DataStructuresTester();
-            qt.TestQueue();
+            DataStructuresTester dst = new DataStructuresTester();
+            dst.TestQueue();
         }
     }
 }

@@ -7,12 +7,14 @@ namespace DataStructures
     {
         private const int defaultMaxSize = 1000;
         private int size, maxSize;
+        private E[] storage;
 
         //Initializes new empty queue of desiredSize if specified or defaultMaxSize
         public Queue(int desiredSize = defaultMaxSize)
         {
             size = 0;
             maxSize = desiredSize;
+            storage = new E[maxSize];
         }
 
         //Attempts to add specified item, returns true if successful, false otherwise

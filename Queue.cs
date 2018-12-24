@@ -25,6 +25,12 @@ namespace DataStructures
             return default(E);
         }
 
+        //Return true if the specified item is in the Queue
+        public bool Contains(E item)
+        {
+            return false;
+        }
+
         //Returns the Queue to an empty state with size of desiredSize
         public void Empty()
         {

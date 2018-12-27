@@ -38,14 +38,14 @@ namespace DataStructures
         //Returns the Queue to an empty state with original size
         public void Empty()
         {
-            this.size = 0;
-            this.storage = new E[this.maxSize];
+            size = 0;
+            storage = new E[this.maxSize];
         }
 
         //Returns current size of the Queue
         public int GetSize()
         {
-            return this.size;
+            return size;
         }
 
         //Returns true if the Queue is full

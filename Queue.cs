@@ -13,6 +13,7 @@ namespace DataStructures
         public Queue(int desiredSize = defaultMaxSize)
         {
             size = 0;
+            last = 0;
             maxSize = desiredSize;
             storage = new E[maxSize];
         }
@@ -24,7 +25,7 @@ namespace DataStructures
             {
                 return false;
             }
-            if (last == maxSize)
+            if (last == maxSize - 1)
             {
                 last = 0;
             }
@@ -35,7 +36,7 @@ namespace DataStructures
 
             storage[last] = item;
             size++;
-            
+
             return true;
         }
 

@@ -6,7 +6,7 @@ namespace DataStructures
     class Queue<E>
     {
         private const int defaultMaxSize = 1000;
-        private int size, maxSize;
+        private int size, maxSize, last;
         private E[] storage;
 
         //Initializes new empty queue of desiredSize if specified or defaultMaxSize
@@ -18,13 +18,25 @@ namespace DataStructures
         }
 
         //Attempts to add specified item, returns true if successful, false otherwise
-        public bool Enqueue()
+        public bool Enqueue(E item)
         {
             if (IsFull())
             {
                 return false;
             }
-            return false;
+            if (last == maxSize)
+            {
+                last = 0;
+            }
+            else
+            {
+                last++;
+            }
+
+            storage[last] = item;
+            size++;
+            
+            return true;
         }
 
         //Attempts to Dequeue the specified item, returns null if unable to find item

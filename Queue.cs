@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace DataStructures
 {
@@ -49,6 +50,16 @@ namespace DataStructures
         //Return true if the specified item is in the Queue
         public bool Contains(E item)
         {
+            for (int i = 0; i < maxSize; i++)
+            {
+                if (storage[i] != null)
+                {
+                    if (EqualityComparer<E>.Default.Equals(storage[i], item))
+                    {
+                        return true;
+                    }
+                }
+            }
             return false;
         }
 

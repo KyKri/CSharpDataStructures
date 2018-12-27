@@ -20,6 +20,10 @@ namespace DataStructures
         //Attempts to add specified item, returns true if successful, false otherwise
         public bool Enqueue()
         {
+            if (IsFull())
+            {
+                return false;
+            }
             return false;
         }
 

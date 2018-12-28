@@ -19,6 +19,7 @@ namespace DataStructures{
             Console.WriteLine($"GetSize should be 0: {q.GetSize()}");
             Console.WriteLine($"IsFull should be false: {q.IsFull()}");
             Console.WriteLine($"IsEmpty should be true: {q.IsEmpty()}");
+            Console.WriteLine($"Contains should be false: {q.Contains(1)}");
 
             //tests on full queue
             Console.WriteLine($"Enqueue should be true: {q.Enqueue(1)}");
@@ -28,7 +29,6 @@ namespace DataStructures{
             Console.WriteLine($"Enqueue should be false: {q.Enqueue(1)}");
 
             //testing contains on populated queue
-            //TO-DO: add tests for Queue that has nothing in first slot (0th element)
             Console.WriteLine($"Contains should be true: {q.Contains(1)}");
             Console.WriteLine($"Contains should be false: {q.Contains(0)}");
         }

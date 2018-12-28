@@ -41,10 +41,10 @@ namespace DataStructures
             return true;
         }
 
-        //Attempts to Dequeue the specified item, returns null if unable to find item
+        //Attempts to Dequeue the specified item, throws InvalidOperationException if the Queue is empty
         public E Dequeue(E item)
         {
-            return default(E);
+            throw new System.InvalidOperationException("The Queue is empty.");
         }
 
         //Return true if the specified item is in the Queue

@@ -31,6 +31,14 @@ namespace DataStructures{
             //testing contains on populated queue
             Console.WriteLine($"Contains should be true: {q.Contains(1)}");
             Console.WriteLine($"Contains should be false: {q.Contains(0)}");
+
+            //test after emptying queue
+            q.Empty();
+            Console.WriteLine($"Emptied Queue");
+            Console.WriteLine($"GetSize should be 0: {q.GetSize()}");
+            Console.WriteLine($"IsFull should be false: {q.IsFull()}");
+            Console.WriteLine($"IsEmpty should be true: {q.IsEmpty()}");
+            Console.WriteLine($"Contains should be false: {q.Contains(1)}");
         }
     }
 }

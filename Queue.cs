@@ -7,13 +7,14 @@ namespace DataStructures
     class Queue<E>
     {
         private const int defaultMaxSize = 1000;
-        private int size, maxSize, last;
+        private int size, maxSize, first, last;
         private E[] storage;
 
         //Initializes new empty queue of desiredSize if specified or defaultMaxSize
         public Queue(int desiredSize = defaultMaxSize)
         {
             size = 0;
+            first = 0;
             last = 0;
             maxSize = desiredSize;
             storage = new E[maxSize];
@@ -48,10 +49,18 @@ namespace DataStructures
             {
                 throw new System.InvalidOperationException("The Queue is empty.");
             }
+            if (first == maxSize - 1)
+            {
+                first = 0;
+            }
             else
             {
-                return default(E);
+                first++;
             }
+
+            size--;
+
+            return storage[first];
         }
 
         //Return true if the specified item is in the Queue

@@ -42,7 +42,7 @@ namespace DataStructures
         }
 
         //Attempts to Dequeue the specified item, throws InvalidOperationException if the Queue is empty
-        public E Dequeue(E item)
+        public E Dequeue()
         {
             throw new System.InvalidOperationException("The Queue is empty.");
         }
